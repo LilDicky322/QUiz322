@@ -1,0 +1,40 @@
+.btn,.item,input{--c:var(--cyan);background:var(--panel);box-shadow:0 -4px 0 0 var(--c),0 4px 0 0 var(--c),-4px 0 0 0 var(--c),4px 0 0 0 var(--c)}
+.btn{padding:14px 16px;margin:4px;color:var(--c);text-transform:uppercase}
+.btn:hover,.btn:focus-visible{--c:var(--yellow);outline:none}
+.btn.small{padding:8px 10px;font-size:10px}
+.item{padding:14px 8px;margin:4px;min-height:56px;text-align:center;word-break:break-word}
+.item:hover,.item:focus-visible{--c:var(--magenta);outline:none}
+.item.selected{--c:var(--yellow);background:#1d3c94}
+.item.matched{--c:var(--green);color:var(--green);opacity:.7;pointer-events:none}
+.item.wrong{--c:var(--red);animation:shake .3s steps(4)}
+@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.cell{font-size:10px;color:var(--muted)}
+.cell b{display:block;margin-top:4px;font-size:14px;color:var(--yellow)}
+.label{font-size:10px;text-align:center;margin-bottom:14px;color:var(--magenta)}
+input{--c:var(--green);width:130px;padding:10px;border:0;text-align:center;text-transform:uppercase}
+input:focus{outline:none;--c:var(--yellow)}
+.ranking{list-style:none;max-width:320px;margin:0 auto}
+.ranking li{padding:6px 0;text-align:center}
+
+/* Texto de las tarjetas: VT323 para que quepan frases largas */
+.item{font-family:"VT323",monospace;font-size:22px;line-height:1.15}
+.btn.level{display:block;width:100%;text-align:left;margin:4px 0}
+.btn.level small{display:block;margin-top:8px;font:20px/1.1 "VT323",monospace;color:var(--ink);text-transform:none}
+.btn[hidden]{display:none}
+#player-name{width:min(100%,260px);text-transform:none}
+.ask{margin-top:20px}
+
+/* Top en vivo */
+.top-panel{--c:var(--cyan);margin:4px;padding:16px 12px;background:rgba(15,42,110,.85);position:sticky;top:16px;
+  box-shadow:0 -4px 0 0 var(--c),0 4px 0 0 var(--c),-4px 0 0 0 var(--c),4px 0 0 0 var(--c)}
+.live{color:var(--red);animation:blink 1s steps(2,start) infinite}
+.top-list{list-style:none}
+.top-list li{display:grid;grid-template-columns:22px 1fr 30px 44px;gap:6px;align-items:center;padding:8px 0;font-size:9px;border-bottom:2px dashed rgba(124,196,255,.25)}
+.top-list .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.top-list .tg{color:var(--cyan)}
+.top-list .sc{text-align:right;color:var(--yellow)}
+.top-list li:first-child .rk{color:var(--yellow)}
+.top-list li.me{color:var(--green)}
+.top-list li.muted{display:block;text-align:center;border:0}
+@media (max-width:900px){.app{grid-template-columns:1fr;max-width:760px}.top-panel{position:static}}
+@media (max-width:520px){.item{font-size:19px}}

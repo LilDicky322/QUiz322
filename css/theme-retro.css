@@ -1,0 +1,13 @@
+/* Fondo: pixel art de la entrada de la UNAJ */
+.crt{position:relative;min-height:100vh;padding:16px 12px;background:#1e7be8 url("../assets/img/fondo.png") center bottom/cover no-repeat fixed;image-rendering:pixelated}
+.crt::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9;background:radial-gradient(ellipse at center,transparent 60%,rgba(0,0,0,.4))}
+.crt::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:10;background:repeating-linear-gradient(to bottom,transparent 0,transparent 2px,rgba(0,0,0,.18) 3px)}
+/* Panel del juego sobre el fondo */
+.app{position:relative;background:rgba(8,20,60,.92);box-shadow:0 -4px 0 0 var(--yellow),0 4px 0 0 var(--yellow),-4px 0 0 0 var(--yellow),4px 0 0 0 var(--yellow),0 0 0 8px #0a1b4d}
+.title{text-align:center;line-height:1.5;font-size:clamp(20px,6vw,34px);color:var(--yellow);text-shadow:4px 4px 0 #b3261e,0 0 18px rgba(255,200,61,.5);margin-top:16px}
+.title.small{font-size:clamp(14px,4vw,20px)}
+.sub{margin-top:14px;font-size:9px;color:var(--cyan)}
+.blink{margin-top:24px;color:var(--yellow);text-shadow:0 0 10px var(--yellow);animation:blink 1s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+.cell b,.hi,.label{text-shadow:0 0 8px currentColor}
+@media (prefers-reduced-motion:reduce){.blink,.item.wrong{animation:none}}

@@ -1,0 +1,30 @@
+[
+  {"id":"ronda1","order":1,"tag":"R1","title":"Ronda 1","subtitle":"Conceptos generales del informe","labels":["COLUMNA A","COLUMNA B"],"pairs":[
+    {"a":"Entidad auditada","b":"Gobierno Regional Piura"},
+    {"a":"Órgano que emitió el informe","b":"Órgano de Control Institucional"},
+    {"a":"Obra del contrato","b":"Establecimiento de Salud de Huarmaca"},
+    {"a":"Documento que modificó el contrato","b":"Adenda n.° 10"},
+    {"a":"Contratista","b":"Consorcio Hospital Piura"},
+    {"a":"Tipo de servicio de control","b":"Control específico a hechos con presunta irregularidad"}]},
+  {"id":"ronda2","order":2,"tag":"R2","title":"Ronda 2","subtitle":"Números y montos","labels":["COLUMNA A","COLUMNA B"],"pairs":[
+    {"a":"Número del contrato original","b":"113-2015"},
+    {"a":"Monto pagado por equipamiento sin estar instalado","b":"S/ 815 198,42"},
+    {"a":"Monto total del contrato","b":"S/ 54 739 278,46"},
+    {"a":"Fecha de firma de la Adenda 10","b":"14 de diciembre de 2020"},
+    {"a":"Número de adendas firmadas al contrato","b":"Once (11)"},
+    {"a":"Provincia donde se ubica la obra","b":"Huancabamba"}]},
+  {"id":"ronda3","order":3,"tag":"R3","title":"Ronda 3","subtitle":"Personas, cargos y normas","labels":["COLUMNA A","COLUMNA B"],"pairs":[
+    {"a":"Saúl Labán Zurita","b":"Gerente Regional de Infraestructura"},
+    {"a":"Andrés Palomino Rosales","b":"Director General de Construcción"},
+    {"a":"Newsthor Barreto Querevalú","b":"Director de Obras"},
+    {"a":"Shirley Sarango Ramos","b":"Directora de Programación y Seguimiento de Contratos de Inversión"},
+    {"a":"Jim Merino Merino","b":"Abogado de la Dirección de Obras"},
+    {"a":"Arturo Delgado Vizcarra","b":"Representante legal del Consorcio"}]},
+  {"id":"extra","order":4,"tag":"EX","title":"Extra","optional":true,"subtitle":"Cambios de la Adenda 10","labels":["COLUMNA A","COLUMNA B"],"pairs":[
+    {"a":"Lugar de almacenamiento antes de la adenda","b":"Establecimiento de salud donde se usaría el equipo"},
+    {"a":"Lugar de almacenamiento según la adenda","b":"Almacén en Lima o Callao"},
+    {"a":"Pago por equipos con pre-instalación al almacenar","b":"80%"},
+    {"a":"Pago por equipos sin pre-instalación al ingresar al almacén","b":"70%"},
+    {"a":"Pandemia invocada para justificar la adenda","b":"COVID-19"},
+    {"a":"Destinatario de las acciones penales recomendadas","b":"Procuraduría Pública Especializada en Delitos de Corrupción"}]}
+]

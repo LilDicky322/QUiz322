@@ -1,0 +1,10 @@
+.app{max-width:1040px;margin:24px auto;padding:24px 20px 32px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.screen{display:none}
+.screen.active{display:block}
+.level-list{display:flex;flex-direction:column;gap:12px;max-width:420px;margin:28px auto}
+.hud{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.column{display:flex;flex-direction:column;gap:12px}
+.save{display:flex;justify-content:center;align-items:center;gap:12px;margin:20px 0 8px}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+@media (max-width:520px){body{font-size:10px}.board{gap:12px}}

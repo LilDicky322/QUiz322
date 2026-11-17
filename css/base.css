@@ -1,0 +1,6 @@
+:root{--bg:#0a1b4d;--panel:#0f2a6e;--ink:#fff6dc;--muted:#9fb4e8;--cyan:#7cc4ff;--magenta:#ff8a5c;--yellow:#ffc83d;--green:#39ff88;--red:#ff4d3d;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:12px/1.7 "Press Start 2P",monospace}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;border:0}
+.center{text-align:center}.muted{color:var(--muted)}.hi{color:var(--yellow)}

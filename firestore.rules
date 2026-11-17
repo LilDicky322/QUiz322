@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Un documento por jugador y ronda: scores/{uid}_{ronda}. Solo se puede mejorar el puntaje.
+    match /scores/{id} {
+      allow read: if true;
+      allow create, update: if request.auth != null
+        && id == request.auth.uid + '_' + request.resource.data.levelId
+        && request.resource.data.keys().hasOnly(['uid','levelId','name','score','errors','timeMs','updatedAt'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.levelId in ['ronda1','ronda2','ronda3','extra']
+        && request.resource.data.name is string
+        && request.resource.data.name.size() >= 2 && request.resource.data.name.size() <= 20
+        && request.resource.data.score is int
+        && request.resource.data.score >= 0 && request.resource.data.score <= 600
+        && request.resource.data.errors is int
+        && request.resource.data.timeMs is int
+        && request.resource.data.updatedAt == request.time
+        && (resource == null || request.resource.data.score > resource.data.score);
+      allow delete: if false;
+    }
+  }
+}

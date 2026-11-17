@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relacionar Columnas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/theme-retro.css">
+</head>
+<body>
+<div class="crt"><div class="app">
+
+ <div class="stage">
+  <section id="screen-name" class="screen active">
+    <h1 class="title">RELACIONAR<br>COLUMNAS</h1>
+    <p class="sub center">UNIVERSIDAD NACIONAL DE JULIACA</p>
+    <p class="blink center">PRESS START</p>
+    <p class="center ask">INGRESA TU NOMBRE</p>
+    <div class="save">
+      <input id="player-name" maxlength="20" placeholder="TU NOMBRE" autocomplete="off" aria-label="Nombre del jugador">
+      <button id="btn-start" class="btn" type="button">JUGAR</button>
+    </div>
+    <p id="name-msg" class="center muted"></p>
+  </section>
+
+  <section id="screen-menu" class="screen">
+    <h1 class="title small">ELIGE UNA RONDA</h1>
+    <p class="center ask">JUGADOR: <span id="player-label" class="hi"></span></p>
+    <div id="level-list" class="level-list"></div>
+    <div class="actions"><button id="btn-change" class="btn small" type="button">CAMBIAR JUGADOR</button></div>
+  </section>
+
+  <section id="screen-game" class="screen">
+    <header class="hud">
+      <div class="cell">SCORE<b id="hud-score">0</b></div>
+      <div class="cell">ERRORES<b id="hud-errors">0</b></div>
+      <div class="cell">TIEMPO<b id="hud-time">00:00</b></div>
+      <button id="btn-sound" class="btn small" type="button">SND ON</button>
+    </header>
+    <div class="board">
+      <div><h2 id="label-a" class="label"></h2><div id="col-a" class="column"></div></div>
+      <div><h2 id="label-b" class="label"></h2><div id="col-b" class="column"></div></div>
+    </div>
+    <div class="actions"><button id="btn-quit" class="btn small" type="button">SALIR</button></div>
+  </section>
+
+  <section id="screen-result" class="screen">
+    <h2 class="title small">¡RONDA COMPLETADA!</h2>
+    <p class="center ask">JUGADOR <span id="result-player" class="hi"></span></p>
+    <p class="center ask">SCORE <span id="result-score" class="hi"></span></p>
+    <p id="save-msg" class="center muted ask"></p>
+    <div class="actions">
+      <button id="btn-next" class="btn" type="button">SIGUIENTE</button>
+      <button id="btn-again" class="btn" type="button">OTRA VEZ</button>
+      <button id="btn-menu" class="btn" type="button">MENÚ</button>
+    </div>
+  </section>
+ </div>
+
+ <aside class="top-panel" aria-label="Top de puntajes en vivo">
+   <h2 class="label"><span class="live">●</span> TOP EN VIVO</h2>
+   <ol id="top-list" class="top-list"><li class="muted">CARGANDO…</li></ol>
+ </aside>
+
+</div></div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
